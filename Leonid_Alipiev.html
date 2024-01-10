@@ -1,0 +1,1211 @@
+﻿
+<!-- saved from url=(0016)http://localhost -->
+<!DOCTYPE html>
+<html dir="ltr" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="IE=9" http-equiv="X-UA-Compatible"/>
+  <style type="text/css">
+   * { padding: 0; margin: 0; border: 0; }
+.modal { display: none; position: fixed; z-index: 1; padding-top: 2%; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);}
+.modal-content { background-color: #fefefe; margin: auto; padding: 5px 0px 20px 20px; border: 1px solid #888; width: 70%; height: 87%; }
+#modalContent { border: 0; width: 100%; height: 98%; }
+.modal-frame { border: 0; width: 100%; height: 100%; }
+.close { color: #aaaaaa; float: right; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.close:hover, .close:focus { color: #000; text-decoration: none; cursor: pointer; }
+.back { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.back:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+.tree { color: #aaaaaa; float: left; font-size: 28px; font-weight: bold; margin-right: 10px; }
+.tree:hover, .back:focus { color: #000; text-decoration: none; cursor: pointer; }
+  </style>
+ </head>
+ <body>
+  <div class="modal" id="myModal">
+   <div class="modal-content">
+    <span class="back">
+     ←
+    </span>
+    <span class="close">
+     ×
+    </span>
+    <span class="tree">
+     ↑
+    </span>
+    <div id="modalContent">
+    </div>
+   </div>
+  </div>
+  <script>
+   var currpos = 0;
+	var currgid = 0;
+	window.addEventListener('message', function(event) { if(event.data.event_id === 'gmsg'){ currgid=event.data.data; }});
+	var modal = document.getElementById("myModal");
+	function closemodal() {
+		modal.style.display = "none";
+		currpos = 0;
+	}
+	var spanback = document.getElementsByClassName("back")[0];
+	spanback.onclick = function() {
+		if( currpos > 1 ) {
+			window.history.back();
+			currpos -= 2;
+		}
+		else
+			closemodal();
+	}
+	var spanx = document.getElementsByClassName("close")[0];
+	spanx.onclick = function() { closemodal(); }
+	var spantree = document.getElementsByClassName("tree")[0];
+	spantree.onclick = function() {
+		closemodal();
+		var elmnt = document.getElementById(currgid);
+		elmnt.scrollIntoView();
+	}
+	nodeclick = function(i) {
+		document.getElementById("modalContent").innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="' + i + '" class="modal-frame"></iframe>';
+		modal.style.display = "block";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal)
+			closemodal();
+	}
+  </script>
+  <svg height="1838.875" version="1.0" width="811" xmlns="http://www.w3.org/2000/svg" xmlns:at="https://genery.com" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <defs>
+    <style type="text/css">
+     <![CDATA[
+				.s0 { fill:#FFFFFF;stroke:none; }
+				.s1 { fill:none;stroke:none; }
+				.s2 { font-size:11px;font-style:normal;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s3 { stroke:#696969;stroke-width:2;stroke-linecap:square; }
+				.s4 { fill:#FFFFFF;stroke:#696969;stroke-width:2; }
+				.s5 { cursor:pointer; }
+				.s6 { fill:#92DDF9;stroke:none; }
+				.s7 { fill:none;stroke:#606060;stroke-width:1; }
+				.s8 { font-size:11px;font-style:italic;font-weight:normal;font-family:Tahoma;fill:#000000; }
+				.s9 { fill:#000000;stroke:#FFFFFF;stroke-width:1; }
+				.s10 { font-size:11px;font-style:normal;font-weight:bold;font-family:Tahoma;fill:#000000; }
+				.s11 { fill:#FBD27A;stroke:none; }
+				.s12 { fill:#FF9368;stroke:none; }
+			]]>
+    </style>
+   </defs>
+   <g id="g2" transform="translate(26,26)">
+    <g id="g3">
+     <line class="s3" id="l448" x1="122" x2="142" y1="303" y2="303">
+     </line>
+     <line class="s3" id="l449" x1="403" x2="423" y1="311" y2="311">
+     </line>
+     <line class="s3" id="l450" x1="198" x2="218" y1="506" y2="506">
+     </line>
+     <line class="s3" id="l451" x1="475" x2="495" y1="521" y2="521">
+     </line>
+     <line class="s3" id="l452" x1="270" x2="425" y1="768" y2="768">
+     </line>
+     <line class="s3" id="l453" x1="414" x2="562" y1="1082" y2="1082">
+     </line>
+     <line class="s3" id="l454" x1="550" x2="570" y1="1329" y2="1329">
+     </line>
+     <line class="s3" id="l455" x1="624" x2="634" y1="1614" y2="1614">
+     </line>
+     <line class="s3" id="l456" x1="62" x2="62" y1="63.5" y2="98.5">
+     </line>
+     <line class="s3" id="l457" x1="61" x2="61" y1="221.5" y2="256.5">
+     </line>
+     <line class="s3" id="l458" x1="342" x2="342" y1="147.125" y2="256.5">
+     </line>
+     <line class="s3" id="l459" x1="132" x2="132" y1="303" y2="459.125">
+     </line>
+     <line class="s3" id="l460" x1="413" x2="413" y1="311" y2="459.125">
+     </line>
+     <line class="s3" id="l461" x1="208" x2="208" y1="506" y2="706.375">
+     </line>
+     <line class="s3" id="l462" x1="485" x2="485" y1="521" y2="706.375">
+     </line>
+     <line class="s3" id="l463" x1="347" x2="347" y1="768" y2="998.25">
+     </line>
+     <line class="s3" id="l464" x1="621" x2="621" y1="829.375" y2="998.25">
+     </line>
+     <line class="s3" id="l465" x1="488" x2="488" y1="1082" y2="1275.25">
+     </line>
+     <line class="s3" id="l466" x1="560" x2="560" y1="1329" y2="1507.625">
+     </line>
+     <line class="s3" id="l467" x1="697" x2="697" y1="1734.75" y2="1742.75">
+     </line>
+     <rect class="s4" height="6" id="r468" width="6" x="694" y="1739.75">
+     </rect>
+    </g>
+    <g id="g4">
+     <g id="g19">
+      <g id="g20">
+       <g id="g21">
+        <g id="g22">
+         <g id="g23">
+          <g at:id="955" class="s5" id="g24" onclick="nodeclick('https://drive.google.com/file/d/19aqSn0x9QJ2PVeYpdh3BsAiPjhqkILzQ/view?usp=drive_link')">
+           <g id="g110">
+            <rect class="s6" height="62.5" id="r111" width="122.505210876465" x="0.5" y="0.5">
+            </rect>
+            <g id="t112" transform="translate(3,3)">
+             <text class="s2" id="ts113" x="0" y="9.875">
+              ПУТИВЛЬ И УЕЗД конец
+             </text>
+             <text class="s2" id="ts114" x="42.9635429382324" y="24.75">
+              17 век
+             </text>
+             <text class="s2" id="ts115" x="7.62760925292969" y="39.625">
+              мест.жит. г. Путивль
+             </text>
+             <text class="s2" id="ts116" x="5.63280868530273" y="54.5">
+              Прапрапрапрапрадед
+             </text>
+            </g>
+           </g>
+           <rect class="s7" height="62.5" id="r117" width="122.505210876465" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+     <g id="g17" transform="translate(0,98.5)">
+      <g id="g18">
+       <g id="g25">
+        <g id="g26">
+         <g id="g27">
+          <g at:id="956" class="s5" id="g28" onclick="nodeclick(956)">
+           <g id="g118">
+            <rect class="s6" height="122" id="r119" width="123.78125" x="0.5" y="0.5">
+            </rect>
+            <image height="17.3999996185303" id="i122" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1BGAJ449xnWxfukcMas-EFX7jLjEu4Amx&amp;export=download" y="1"/>
+            <g id="t121" transform="translate(3,3)">
+             <text class="s2" id="ts123" x="68.53125" y="9.875">
+              Артемий
+             </text>
+             <text class="s2" id="ts124" x="71.5260467529297" y="24.75">
+              Иванов
+             </text>
+             <text class="s2" id="ts125" x="18.5364608764648" y="39.625">
+              (1703 - До 1761)
+             </text>
+             <text class="s2" id="ts126" x="0" y="54.5">
+              мест.жит. старый Собор
+             </text>
+             <text class="s2" id="ts127" x="1.3046875" y="69.375">
+              Преображения Спасова
+             </text>
+             <text class="s8" id="ts128" x="49.2558631896973" y="84.25">
+              Поп
+             </text>
+             <text class="s2" id="ts129" x="15.0234375" y="99.125">
+              Прапрапрапрадед
+             </text>
+             <text class="s2" id="ts130" x="53.5677108764648" y="114">
+              58
+             </text>
+            </g>
+            <polygon class="s9" id="p120" points="1,14 1,7 7,1 14,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="122" id="r131" width="123.78125" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+      <g id="g68" transform="translate(294.524719238281,0)">
+       <g id="g69">
+        <g id="g70">
+         <g id="g71">
+          <g at:id="1522" class="s5" id="g72" onclick="nodeclick(1522)">
+           <g id="g132">
+            <rect class="s6" height="47.625" id="r133" width="93.7343826293945" x="0.5" y="0.5">
+            </rect>
+            <g id="t134" transform="translate(3,3)">
+             <text class="s2" id="ts135" x="3.47656631469727" y="9.875">
+              Пра~ Коренский
+             </text>
+             <text class="s2" id="ts136" x="0" y="24.75">
+              Прапрапрапрадед
+             </text>
+             <text class="s10" id="ts137" x="14.6822948455811" y="39.625">
+              Коренские
+             </text>
+            </g>
+           </g>
+           <rect class="s7" height="47.625" id="r138" width="93.7343826293945" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+     <g id="g15" transform="translate(0,256.5)">
+      <g id="g16">
+       <g id="g29">
+        <g id="g30">
+         <g id="g31">
+          <g at:id="855" class="s5" id="g32" onclick="nodeclick(855)">
+           <g id="g139">
+            <rect class="s6" height="166.625" id="r140" width="121.135414123535" x="0.5" y="0.5">
+            </rect>
+            <image height="39.9000015258789" id="i143" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1A-Q9Widf22dHtw_Wx0DsNkFT7x9Kq9Me&amp;export=download" y="1"/>
+            <g id="t142" transform="translate(3,3)">
+             <text class="s2" id="ts144" x="66.7708282470703" y="9.875">
+              Иродион
+             </text>
+             <text class="s2" id="ts145" x="64.9453125" y="24.75">
+              Артемьев
+             </text>
+             <text class="s2" id="ts146" x="70.7760391235352" y="39.625">
+              (1729 -
+             </text>
+             <text class="s2" id="ts147" x="44.3802070617676" y="54.5">
+              1799)
+             </text>
+             <text class="s2" id="ts148" x="34.2838516235352" y="69.375">
+              мест.жит.
+             </text>
+             <text class="s2" id="ts149" x="0" y="84.25">
+              Спасо-Преображенский
+             </text>
+             <text class="s2" id="ts150" x="11.4739570617676" y="99.125">
+              (бывш. Духовской)
+             </text>
+             <text class="s2" id="ts151" x="43.9348945617676" y="114">
+              собор
+             </text>
+             <text class="s8" id="ts152" x="29.5384101867676" y="128.875">
+              Священник
+             </text>
+             <text class="s2" id="ts153" x="22.4531211853027" y="143.75">
+              Прапрапрадед
+             </text>
+             <text class="s2" id="ts154" x="52.2447891235352" y="158.625">
+              70
+             </text>
+            </g>
+            <polygon class="s9" id="p141" points="1,14 1,7 7,1 14,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="166.625" id="r155" width="121.135414123535" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+      <g id="g55" transform="translate(142.135406494141,0)">
+       <g id="g56">
+        <g id="g57">
+         <g id="g58">
+          <g at:id="892" class="s5" id="g59" onclick="nodeclick(892)">
+           <g clip-path="url(#g169)" id="g156">
+            <rect class="s11" height="92.25" id="r157" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+            </rect>
+            <image height="8.69999980926514" id="i160" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1HNsI9cyQlzcbV96fZJSKE8MbE9oy3Z-G&amp;export=download" y="1"/>
+            <g id="t159" transform="translate(3,3)">
+             <text class="s2" id="ts161" x="70.4537734985352" y="9.875">
+              Мария
+             </text>
+             <text class="s2" id="ts162" x="35.1647109985352" y="24.75">
+              Михеева
+             </text>
+             <text class="s2" id="ts163" x="7.091796875" y="39.625">
+              (1736 - После 1794)
+             </text>
+             <text class="s8" id="ts164" x="0" y="54.5">
+              Священническая жена
+             </text>
+             <text class="s2" id="ts165" x="8.34960556030273" y="69.375">
+              Прапрапрабабушка
+             </text>
+             <text class="s2" id="ts166" x="50.3079414367676" y="84.25">
+              58
+             </text>
+            </g>
+            <polygon class="s9" id="p158" points="1,18 1,11 11,1 18,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="92.25" id="r167" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+           </rect>
+           <defs>
+            <clippath id="g169">
+             <rect class="s0" height="92.25" id="r170" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+             </rect>
+            </clippath>
+           </defs>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+      <g id="g67" transform="translate(280.397125244141,0)">
+       <g id="g73">
+        <g id="g74">
+         <g id="g75">
+          <g at:id="1032" class="s5" id="g76" onclick="nodeclick(1032)">
+           <g id="g171">
+            <rect class="s6" height="151.75" id="r172" width="121.989585876465" x="0.5" y="0.5">
+            </rect>
+            <image height="12.6000003814697" id="i175" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1AE8kbfFo2ZJlJDEap3Mbw9iiVvW9tp-x&amp;export=download" y="1"/>
+            <g id="t174" transform="translate(3,3)">
+             <text class="s2" id="ts176" x="73.2213592529297" y="9.875">
+              Иоанн
+             </text>
+             <text class="s2" id="ts177" x="2.75260543823242" y="24.75">
+              Георгиевич Коренский
+             </text>
+             <text class="s2" id="ts178" x="5.10677337646484" y="39.625">
+              (1733 - Между 1811 и
+             </text>
+             <text class="s2" id="ts179" x="44.8072929382324" y="54.5">
+              1815)
+             </text>
+             <text class="s2" id="ts180" x="0" y="69.375">
+              мест.жит. с. Коренское,
+             </text>
+             <text class="s2" id="ts181" x="29.1640625" y="84.25">
+              Рыльский у.
+             </text>
+             <text class="s8" id="ts182" x="29.9654960632324" y="99.125">
+              Священник
+             </text>
+             <text class="s2" id="ts183" x="22.8802070617676" y="114">
+              Прапрапрадед
+             </text>
+             <text class="s2" id="ts184" x="52.671875" y="128.875">
+              78
+             </text>
+             <text class="s10" id="ts185" x="28.8098964691162" y="143.75">
+              Коренские
+             </text>
+            </g>
+            <polygon class="s9" id="p173" points="1,14 1,7 7,1 14,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="151.75" id="r186" width="121.989585876465" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+      <g id="g85" transform="translate(423.38671875,0)">
+       <g id="g86">
+        <g id="g87">
+         <g id="g88">
+          <g at:id="1097" class="s5" id="g89" onclick="nodeclick(1097)">
+           <g clip-path="url(#g201)" id="g187">
+            <rect class="s11" height="107.125" id="r188" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+            </rect>
+            <image height="12" id="i191" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1HBmzr-vodTLps3EuFSeo_C9H4AZUQvKE&amp;export=download" y="1"/>
+            <g id="t190" transform="translate(3,3)">
+             <text class="s2" id="ts192" x="66.1907577514648" y="9.875">
+              Евдокея
+             </text>
+             <text class="s2" id="ts193" x="3.42251968383789" y="24.75">
+              Васильева Коренская
+             </text>
+             <text class="s2" id="ts194" x="8.61002731323242" y="39.625">
+              (1732 - 29.04.1824)
+             </text>
+             <text class="s8" id="ts195" x="0" y="54.5">
+              Священническая жена
+             </text>
+             <text class="s2" id="ts196" x="18.9016914367676" y="69.375">
+              ум. в с. Крупец
+             </text>
+             <text class="s2" id="ts197" x="8.34960556030273" y="84.25">
+              Прапрапрабабушка
+             </text>
+             <text class="s2" id="ts198" x="50.3079414367676" y="99.125">
+              92
+             </text>
+            </g>
+            <polygon class="s9" id="p189" points="1,18 1,11 11,1 18,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="107.125" id="r199" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+           </rect>
+           <defs>
+            <clippath id="g201">
+             <rect class="s0" height="107.125" id="r202" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+             </rect>
+            </clippath>
+           </defs>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+     <g id="g13" transform="translate(0,459.125)">
+      <g id="g14" transform="translate(66.2447814941406,0)">
+       <g id="g33">
+        <g id="g34">
+         <g id="g35">
+          <g at:id="514" class="s5" id="g36" onclick="nodeclick(514)">
+           <g id="g203">
+            <rect class="s6" height="196.375" id="r204" width="130.78125" x="0.5" y="0.5">
+            </rect>
+            <image height="36" id="i207" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1GVnESAheeLu3bXC-a1zeXP8MuZjMqNDC&amp;export=download" y="1"/>
+            <g id="t206" transform="translate(3,3)">
+             <text class="s2" id="ts208" x="77.6171875" y="9.875">
+              Иоанн
+             </text>
+             <text class="s2" id="ts209" x="60" y="24.75">
+              Иродионович
+             </text>
+             <text class="s2" id="ts210" x="65.9010391235352" y="39.625">
+              Иродионов
+             </text>
+             <text class="s2" id="ts211" x="17.21875" y="54.5">
+              (он же Духовской)
+             </text>
+             <text class="s2" id="ts212" x="13.8515625" y="69.375">
+              (1764 - После 1832)
+             </text>
+             <text class="s2" id="ts213" x="39.1067695617676" y="84.25">
+              мест.жит.
+             </text>
+             <text class="s2" id="ts214" x="4.82291793823242" y="99.125">
+              Спасо-Преображенский
+             </text>
+             <text class="s2" id="ts215" x="16.296875" y="114">
+              (бывш. Духовской)
+             </text>
+             <text class="s2" id="ts216" x="48.7578125" y="128.875">
+              собор
+             </text>
+             <text class="s8" id="ts217" x="44.287109375" y="143.75">
+              Дьячок
+             </text>
+             <text class="s2" id="ts218" x="36.0286445617676" y="158.625">
+              Прапрадед
+             </text>
+             <text class="s2" id="ts219" x="57.0677070617676" y="173.5">
+              68
+             </text>
+             <text class="s10" id="ts220" x="33.2994766235352" y="188.375">
+              Духовские
+             </text>
+            </g>
+            <polygon class="s9" id="p205" points="1,14 1,7 7,1 14,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="196.375" id="r221" width="130.78125" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+      <g id="g60" transform="translate(218.026031494141,0)">
+       <g id="g61">
+        <g id="g62">
+         <g id="g63">
+          <g at:id="887" class="s5" id="g64" onclick="nodeclick(887)">
+           <g clip-path="url(#g235)" id="g222">
+            <rect class="s11" height="92.25" id="r223" rx="10" ry="10" width="105.40625" x="0.5" y="0.5">
+            </rect>
+            <image height="12.8999996185303" id="i226" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1BFrP45iYeaxQ5sj0HhMPWzekJLxe2XBz&amp;export=download" y="1"/>
+            <g id="t225" transform="translate(3,3)">
+             <text class="s2" id="ts227" x="60" y="9.875">
+              Пелагия
+             </text>
+             <text class="s2" id="ts228" x="19.5468730926514" y="24.75">
+              Никифорова
+             </text>
+             <text class="s2" id="ts229" x="1.1640625" y="39.625">
+              (1767 - После 1815)
+             </text>
+             <text class="s8" id="ts230" x="4.248046875" y="54.5">
+              Дьячковская жена
+             </text>
+             <text class="s2" id="ts231" x="11.1744766235352" y="69.375">
+              Прапрабабушка
+             </text>
+             <text class="s2" id="ts232" x="44.3802070617676" y="84.25">
+              48
+             </text>
+            </g>
+            <polygon class="s9" id="p224" points="1,18 1,11 11,1 18,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="92.25" id="r233" rx="10" ry="10" width="105.40625" x="0.5" y="0.5">
+           </rect>
+           <defs>
+            <clippath id="g235">
+             <rect class="s0" height="92.25" id="r236" rx="10" ry="10" width="105.40625" x="0.5" y="0.5">
+             </rect>
+            </clippath>
+           </defs>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+      <g id="g66" transform="translate(352.087249755859,0)">
+       <g id="g77">
+        <g id="g78">
+         <g id="g79">
+          <g at:id="919" class="s5" id="g80" onclick="nodeclick(919)">
+           <g id="g237">
+            <rect class="s6" height="211.25" id="r238" width="121.598945617676" x="0.5" y="0.5">
+            </rect>
+            <image height="78" id="i241" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1FCUayfBx9_QEeQDMuk5hCx0DtJJTB6i2&amp;export=download" y="1"/>
+            <g id="t240" transform="translate(3,3)">
+             <text class="s2" id="ts242" x="61.4140548706055" y="9.875">
+              Василий (в
+             </text>
+             <text class="s2" id="ts243" x="77.3802032470703" y="24.75">
+              мон.
+             </text>
+             <text class="s2" id="ts244" x="65.8489532470703" y="39.625">
+              Виталий)
+             </text>
+             <text class="s2" id="ts245" x="70.4348907470703" y="54.5">
+              Иванов
+             </text>
+             <text class="s2" id="ts246" x="62.3046798706055" y="69.375">
+              Коренский
+             </text>
+             <text class="s2" id="ts247" x="67.6588439941406" y="84.25">
+              род. в с.
+             </text>
+             <text class="s2" id="ts248" x="0" y="99.125">
+              Коренское, Рыльский у.
+             </text>
+             <text class="s2" id="ts249" x="9.26041030883789" y="114">
+              (1764 - После 1828)
+             </text>
+             <text class="s2" id="ts250" x="9.42707443237305" y="128.875">
+              мест.жит. с. Крупец
+             </text>
+             <text class="s8" id="ts251" x="9.48501968383789" y="143.75">
+              Протопоп (выбыл в
+             </text>
+             <text class="s8" id="ts252" x="25.4576759338379" y="158.625">
+              монашество)
+             </text>
+             <text class="s2" id="ts253" x="31.4374923706055" y="173.5">
+              Прапрадед
+             </text>
+             <text class="s2" id="ts254" x="52.4765548706055" y="188.375">
+              64
+             </text>
+             <text class="s10" id="ts255" x="28.6145763397217" y="203.25">
+              Коренские
+             </text>
+            </g>
+            <polygon class="s9" id="p239" points="1,14 1,7 7,1 14,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="211.25" id="r256" width="121.598945617676" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+      <g id="g90" transform="translate(494.686187744141,0)">
+       <g id="g91">
+        <g id="g92">
+         <g id="g93">
+          <g at:id="920" class="s5" id="g94" onclick="nodeclick(920)">
+           <g clip-path="url(#g272)" id="g257">
+            <rect class="s11" height="122" id="r258" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+            </rect>
+            <image height="13.8000001907349" id="i261" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1GiEUk6CLPncZcJZfQGNOgZtRsiB1-f94&amp;export=download" y="1"/>
+            <g id="t260" transform="translate(3,3)">
+             <text class="s2" id="ts262" x="68.826171875" y="9.875">
+              Ксения
+             </text>
+             <text class="s2" id="ts263" x="17.6673126220703" y="24.75">
+              Пантелимонова
+             </text>
+             <text class="s2" id="ts264" x="30.5319023132324" y="39.625">
+              Коренская
+             </text>
+             <text class="s2" id="ts265" x="7.091796875" y="54.5">
+              (1773 - После 1805)
+             </text>
+             <text class="s2" id="ts266" x="7.25846099853516" y="69.375">
+              мест.жит. с. Крупец
+             </text>
+             <text class="s8" id="ts267" x="0" y="84.25">
+              Священническая жена
+             </text>
+             <text class="s2" id="ts268" x="17.1022109985352" y="99.125">
+              Прапрабабушка
+             </text>
+             <text class="s2" id="ts269" x="50.3079414367676" y="114">
+              32
+             </text>
+            </g>
+            <polygon class="s9" id="p259" points="1,18 1,11 11,1 18,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="122" id="r270" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+           </rect>
+           <defs>
+            <clippath id="g272">
+             <rect class="s0" height="122" id="r273" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+             </rect>
+            </clippath>
+           </defs>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+     <g id="g11" transform="translate(0,706.375)">
+      <g id="g12" transform="translate(146.531234741211,0)">
+       <g id="g37">
+        <g id="g38">
+         <g id="g39">
+          <g at:id="496" class="s5" id="g40" onclick="nodeclick(496)">
+           <g id="g274">
+            <rect class="s6" height="255.875" id="r275" width="121.989585876465" x="0.5" y="0.5">
+            </rect>
+            <image height="35.7000007629395" id="i278" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1EU_e2kpnMYJSOYyw7WYs__DBkXgyD2V2&amp;export=download" y="1"/>
+            <g id="t277" transform="translate(3,3)">
+             <text class="s2" id="ts279" x="66.3307342529297" y="9.875">
+              Никифор
+             </text>
+             <text class="s2" id="ts280" x="64.7291717529297" y="24.75">
+              Иванович
+             </text>
+             <text class="s2" id="ts281" x="62.8411445617676" y="39.625">
+              Духовской
+             </text>
+             <text class="s2" id="ts282" x="43.5963554382324" y="54.5">
+              род. в
+             </text>
+             <text class="s2" id="ts283" x="0.427085876464844" y="69.375">
+              Спасо-Преображенский
+             </text>
+             <text class="s2" id="ts284" x="11.9010429382324" y="84.25">
+              (бывш. Духовской)
+             </text>
+             <text class="s2" id="ts285" x="44.3619804382324" y="99.125">
+              собор
+             </text>
+             <text class="s2" id="ts286" x="26.3281211853027" y="114">
+              (02.02.1788 -
+             </text>
+             <text class="s2" id="ts287" x="29.9322910308838" y="128.875">
+              02.02.1832)
+             </text>
+             <text class="s2" id="ts288" x="0" y="143.75">
+              мест.жит. с. Коренское,
+             </text>
+             <text class="s2" id="ts289" x="29.1640625" y="158.625">
+              Рыльский у.
+             </text>
+             <text class="s8" id="ts290" x="29.9654960632324" y="173.5">
+              Священник
+             </text>
+             <text class="s2" id="ts291" x="11.6432304382324" y="188.375">
+              ум. в с. Коренское,
+             </text>
+             <text class="s2" id="ts292" x="29.1640625" y="203.25">
+              Рыльский у.
+             </text>
+             <text class="s2" id="ts293" x="40.3854179382324" y="218.125">
+              Прадед
+             </text>
+             <text class="s2" id="ts294" x="52.671875" y="233">
+              44
+             </text>
+             <text class="s10" id="ts295" x="28.9036464691162" y="247.875">
+              Духовские
+             </text>
+            </g>
+            <polygon class="s9" id="p276" points="1,14 1,7 7,1 14,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="255.875" id="r296" width="121.989585876465" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+      <g id="g65" transform="translate(424.970031738281,0)">
+       <g id="g81">
+        <g id="g82">
+         <g id="g83">
+          <g at:id="505" class="s5" id="g84" onclick="nodeclick(505)">
+           <g clip-path="url(#g312)" id="g297">
+            <rect class="s11" height="122" id="r298" rx="10" ry="10" width="118.432304382324" x="0.5" y="0.5">
+            </rect>
+            <image height="25.2000007629395" id="i301" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1EDHH8DGinmBirktrEnoVJgx5jhddu7jH&amp;export=download" y="1"/>
+            <g id="t300" transform="translate(3,3)">
+             <text class="s2" id="ts302" x="71.3880310058594" y="9.875">
+              Ирина
+             </text>
+             <text class="s2" id="ts303" x="61.2734413146973" y="24.75">
+              Васильева
+             </text>
+             <text class="s2" id="ts304" x="0" y="39.625">
+              Духовская (Коренская)
+             </text>
+             <text class="s2" id="ts305" x="7.67708969116211" y="54.5">
+              (1792 - После 1831)
+             </text>
+             <text class="s8" id="ts306" x="35.3196678161621" y="69.375">
+              Попадья
+             </text>
+             <text class="s2" id="ts307" x="26.4401111602783" y="84.25">
+              Прабабушка
+             </text>
+             <text class="s2" id="ts308" x="50.8932342529297" y="99.125">
+              39
+             </text>
+             <text class="s10" id="ts309" x="27.0312557220459" y="114">
+              Коренские
+             </text>
+            </g>
+            <polygon class="s9" id="p299" points="1,18 1,11 11,1 18,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="122" id="r310" rx="10" ry="10" width="118.432304382324" x="0.5" y="0.5">
+           </rect>
+           <defs>
+            <clippath id="g312">
+             <rect class="s0" height="122" id="r313" rx="10" ry="10" width="118.432304382324" x="0.5" y="0.5">
+             </rect>
+            </clippath>
+           </defs>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+      <g id="g96" transform="translate(564.40234375,0)">
+       <g id="g97">
+        <g id="g98">
+         <g id="g99">
+          <g at:id="823" class="s5" id="g100" onclick="nodeclick(823)">
+           <g id="g314">
+            <rect class="s6" height="122" id="r315" width="112.411460876465" x="0.5" y="0.5">
+            </rect>
+            <g id="t317" transform="translate(3,3)">
+             <text class="s2" id="ts318" x="9" y="9.875">
+              Иоанн Микуловский
+             </text>
+             <text class="s2" id="ts319" x="4.64323043823242" y="24.75">
+              (До 1810 - До 1874)
+             </text>
+             <text class="s2" id="ts320" x="0" y="39.625">
+              мест.жит. г. Лебедин,
+             </text>
+             <text class="s2" id="ts321" x="15.4947929382324" y="54.5">
+              Лебединский у.
+             </text>
+             <text class="s8" id="ts322" x="25.1764335632324" y="69.375">
+              Священник
+             </text>
+             <text class="s2" id="ts323" x="35.5963554382324" y="84.25">
+              Прадед
+             </text>
+             <text class="s2" id="ts324" x="47.8828125" y="99.125">
+              64
+             </text>
+             <text class="s10" id="ts325" x="16.4869766235352" y="114">
+              Микуловские
+             </text>
+            </g>
+            <polygon class="s9" id="p316" points="1,14 1,7 7,1 14,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="122" id="r326" width="112.411460876465" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+     <g id="g9" transform="translate(0,998.25)">
+      <g id="g10" transform="translate(280.487609863281,0)">
+       <g id="g41">
+        <g id="g42">
+         <g id="g43">
+          <g at:id="430" class="s5" id="g44" onclick="nodeclick(430)">
+           <g id="g327">
+            <rect class="s6" height="241.000015258789" id="r328" width="132.515625" x="0.5" y="0.5">
+            </rect>
+            <image height="39.9000015258789" id="i331" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=19u2pm5A3276pw5ScJbXPZ_I5WQOSIHAc&amp;export=download" y="1"/>
+            <g id="t330" transform="translate(3,3)">
+             <text class="s2" id="ts332" x="73.3776016235352" y="9.875">
+              Василий
+             </text>
+             <text class="s2" id="ts333" x="60" y="24.75">
+              Никифорович
+             </text>
+             <text class="s2" id="ts334" x="68.1041641235352" y="39.625">
+              Духовской
+             </text>
+             <text class="s2" id="ts335" x="14.1484375" y="54.5">
+              род. в с. Коренское,
+             </text>
+             <text class="s2" id="ts336" x="34.4270820617676" y="69.375">
+              Рыльский у.
+             </text>
+             <text class="s2" id="ts337" x="31.5911407470703" y="84.25">
+              (24.02.1818 -
+             </text>
+             <text class="s2" id="ts338" x="35.1953125" y="99.125">
+              08.01.1874)
+             </text>
+             <text class="s2" id="ts339" x="39.9739570617676" y="114">
+              мест.жит.
+             </text>
+             <text class="s2" id="ts340" x="23.3854141235352" y="128.875">
+              Благовещенская
+             </text>
+             <text class="s2" id="ts341" x="14.9791679382324" y="143.75">
+              церковь, г. Путивль
+             </text>
+             <text class="s8" id="ts342" x="36.0703125" y="158.625">
+              Протоирей
+             </text>
+             <text class="s2" id="ts343" x="9.57811737060547" y="173.5">
+              ум. в Благовещенская
+             </text>
+             <text class="s2" id="ts344" x="14.9791679382324" y="188.375">
+              церковь, г. Путивль
+             </text>
+             <text class="s2" id="ts345" x="54.328125" y="203.25">
+              Дед
+             </text>
+             <text class="s2" id="ts346" x="57.9348945617676" y="218.125">
+              55
+             </text>
+             <text class="s10" id="ts347" x="34.1666641235352" y="233">
+              Духовские
+             </text>
+            </g>
+            <polygon class="s9" id="p329" points="1,14 1,7 7,1 14,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="241.000015258789" id="r348" width="132.515625" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+      <g id="g95" transform="translate(561.977233886719,0)">
+       <g id="g101">
+        <g id="g102">
+         <g id="g103">
+          <g at:id="478" class="s5" id="g104" onclick="nodeclick(478)">
+           <g clip-path="url(#g367)" id="g349">
+            <rect class="s11" height="166.625" id="r350" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+            </rect>
+            <image height="17.3999996185303" id="i353" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=19-iinJO7cWVGlNe1nWqlSz8Cl3Z1Q9Rx&amp;export=download" y="1"/>
+            <g id="t352" transform="translate(3,3)">
+             <text class="s2" id="ts354" x="71.568359375" y="9.875">
+              Елена
+             </text>
+             <text class="s2" id="ts355" x="65.466796875" y="24.75">
+              Иванова
+             </text>
+             <text class="s2" id="ts356" x="30.763671875" y="39.625">
+              Духовская
+             </text>
+             <text class="s2" id="ts357" x="17.7089805603027" y="54.5">
+              (Микуловская?)
+             </text>
+             <text class="s2" id="ts358" x="8.61002731323242" y="69.375">
+              (1825 - 21.11.1872)
+             </text>
+             <text class="s8" id="ts359" x="0" y="84.25">
+              Священническая жена
+             </text>
+             <text class="s2" id="ts360" x="6.40950012207031" y="99.125">
+              ум. в Воскресенская
+             </text>
+             <text class="s2" id="ts361" x="7.35221481323242" y="114">
+              церковь, г. Путивль
+             </text>
+             <text class="s2" id="ts362" x="34.9928359985352" y="128.875">
+              Бабушка
+             </text>
+             <text class="s2" id="ts363" x="50.3079414367676" y="143.75">
+              47
+             </text>
+             <text class="s10" id="ts364" x="18.9121055603027" y="158.625">
+              Микуловские
+             </text>
+            </g>
+            <polygon class="s9" id="p351" points="1,18 1,11 11,1 18,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="166.625" id="r365" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+           </rect>
+           <defs>
+            <clippath id="g367">
+             <rect class="s0" height="166.625" id="r368" rx="10" ry="10" width="117.26171875" x="0.5" y="0.5">
+             </rect>
+            </clippath>
+           </defs>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+     <g id="g7" transform="translate(0,1275.25)">
+      <g id="g8" transform="translate(426.445953369141,0)">
+       <g id="g45">
+        <g id="g46">
+         <g id="g47">
+          <g at:id="66" class="s5" id="g48" onclick="nodeclick(66)">
+           <g id="g369">
+            <rect class="s6" height="196.375" id="r370" width="122.088554382324" x="0.5" y="0.5">
+            </rect>
+            <image height="21.6000003814697" id="i373" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1BkafoW2mvcfsNwENrjINqhLDI-kz4pFt&amp;export=download" y="1"/>
+            <g id="t372" transform="translate(3,3)">
+             <text class="s2" id="ts374" x="70.3645858764648" y="9.875">
+              Алипий
+             </text>
+             <text class="s2" id="ts375" x="60" y="24.75">
+              Васильевич
+             </text>
+             <text class="s2" id="ts376" x="32.890625" y="39.625">
+              Духовской
+             </text>
+             <text class="s2" id="ts377" x="24.4036445617676" y="54.5">
+              (Около 1851 -
+             </text>
+             <text class="s2" id="ts378" x="29.9817714691162" y="69.375">
+              15.08.1893)
+             </text>
+             <text class="s2" id="ts379" x="8.24999618530273" y="84.25">
+              мест.жит. сл. Белая,
+             </text>
+             <text class="s2" id="ts380" x="22.9453163146973" y="99.125">
+              Суджанский у.
+             </text>
+             <text class="s8" id="ts381" x="30.0149765014648" y="114">
+              Священник
+             </text>
+             <text class="s2" id="ts382" x="19.8932304382324" y="128.875">
+              ум. в сл. Белая,
+             </text>
+             <text class="s2" id="ts383" x="22.9453163146973" y="143.75">
+              Суджанский у.
+             </text>
+             <text class="s2" id="ts384" x="46.4244804382324" y="158.625">
+              Отец
+             </text>
+             <text class="s2" id="ts385" x="52.7213554382324" y="173.5">
+              42
+             </text>
+             <text class="s10" id="ts386" x="28.9531269073486" y="188.375">
+              Духовские
+             </text>
+            </g>
+            <polygon class="s9" id="p371" points="1,14 1,7 7,1 14,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="196.375" id="r387" width="122.088554382324" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+      <g id="g105" transform="translate(569.534545898438,0)">
+       <g id="g106">
+        <g id="g107">
+         <g id="g108">
+          <g at:id="479" class="s5" id="g109" onclick="nodeclick(479)">
+           <g clip-path="url(#g402)" id="g388">
+            <rect class="s11" height="107.125" id="r389" rx="10" ry="10" width="119.494781494141" x="0.5" y="0.5">
+            </rect>
+            <image height="21.2999992370605" id="i392" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1GExwPgxenjtRT2WbC1tbGHZQOh14UeQ7&amp;export=download" y="1"/>
+            <g id="t391" transform="translate(3,3)">
+             <text class="s2" id="ts393" x="73.3932266235352" y="9.875">
+              Юлия
+             </text>
+             <text class="s2" id="ts394" x="60.8385429382324" y="24.75">
+              Матвеевна
+             </text>
+             <text class="s2" id="ts395" x="31.8802070617676" y="39.625">
+              Духовская
+             </text>
+             <text class="s2" id="ts396" x="0" y="54.5">
+              (До 1870 - После 1903)
+             </text>
+             <text class="s8" id="ts397" x="1.11653518676758" y="69.375">
+              Священническая жена
+             </text>
+             <text class="s2" id="ts398" x="45.1796875" y="84.25">
+              Мать
+             </text>
+             <text class="s2" id="ts399" x="51.4244766235352" y="99.125">
+              33
+             </text>
+            </g>
+            <polygon class="s9" id="p390" points="1,18 1,11 11,1 18,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="107.125" id="r400" rx="10" ry="10" width="119.494781494141" x="0.5" y="0.5">
+           </rect>
+           <defs>
+            <clippath id="g402">
+             <rect class="s0" height="107.125" id="r403" rx="10" ry="10" width="119.494781494141" x="0.5" y="0.5">
+             </rect>
+            </clippath>
+           </defs>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+     <g id="g5" transform="translate(0,1507.625)">
+      <g id="g6" transform="translate(495.227233886719,0)">
+       <g id="g49">
+        <g id="g50">
+         <g id="g51">
+          <g at:id="64" class="s5" id="g52" onclick="nodeclick(64)">
+           <g id="g404">
+            <rect class="s12" height="211.25" id="r405" width="127.614593505859" x="0.5" y="0.5">
+            </rect>
+            <image height="91.1999969482422" id="i408" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1FoAV1qCOvXVQ-RAI3tv49utWOJyjIRmG&amp;export=download" y="1"/>
+            <g id="t407" transform="translate(3,3)">
+             <text class="s2" id="ts409" x="73.0052108764648" y="9.875">
+              Леонид
+             </text>
+             <text class="s2" id="ts410" x="64.6276092529297" y="24.75">
+              Алипиевич
+             </text>
+             <text class="s2" id="ts411" x="65.6536483764648" y="39.625">
+              Духовской
+             </text>
+             <text class="s2" id="ts412" x="70.6666717529297" y="54.5">
+              род. в с.
+             </text>
+             <text class="s2" id="ts413" x="66.328125" y="69.375">
+              Погаричи,
+             </text>
+             <text class="s2" id="ts414" x="60" y="84.25">
+              Путивльский
+             </text>
+             <text class="s2" id="ts415" x="87.0364685058594" y="99.125">
+              у.
+             </text>
+             <text class="s2" id="ts416" x="29.140625" y="114">
+              (02.02.1884 -
+             </text>
+             <text class="s2" id="ts417" x="32.7447967529297" y="128.875">
+              30.12.1937)
+             </text>
+             <text class="s2" id="ts418" x="10.1354217529297" y="143.75">
+              мест.жит. г. Валуйки
+             </text>
+             <text class="s8" id="ts419" x="30.8131561279297" y="158.625">
+              Протоиерей
+             </text>
+             <text class="s2" id="ts420" x="21.7786521911621" y="173.5">
+              ум. в г. Валуйки
+             </text>
+             <text class="s2" id="ts421" x="55.4843788146973" y="188.375">
+              53
+             </text>
+             <text class="s10" id="ts422" x="31.7161502838135" y="203.25">
+              Духовские
+             </text>
+            </g>
+            <polygon class="s9" id="p406" points="1,14 1,7 7,1 14,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="211.25" id="r423" width="127.614593505859" x="0.5" y="0.5">
+           </rect>
+          </g>
+         </g>
+         <g id="g53" transform="translate(138.614593505859,0)">
+          <g at:id="65" class="s5" id="g54" onclick="nodeclick(65)">
+           <g clip-path="url(#g446)" id="g424">
+            <rect class="s11" height="226.125" id="r425" rx="10" ry="10" width="124.546882629395" x="0.5" y="0.5">
+            </rect>
+            <image height="80.0999984741211" id="i428" preserveaspectratio="none" width="60" x="1" xlink:href="https://drive.google.com/uc?id=1BmsFbezQP3n4J3acEOE2ywlykIVW_Anb&amp;export=download" y="1"/>
+            <g id="t427" transform="translate(3,3)">
+             <text class="s2" id="ts429" x="66.3776092529297" y="9.875">
+              Антонина
+             </text>
+             <text class="s2" id="ts430" x="66.1067810058594" y="24.75">
+              Ивановна
+             </text>
+             <text class="s2" id="ts431" x="64.40625" y="39.625">
+              Духовская
+             </text>
+             <text class="s2" id="ts432" x="60.9270896911621" y="54.5">
+              (Синицына)
+             </text>
+             <text class="s2" id="ts433" x="69.1328125" y="69.375">
+              род. в с.
+             </text>
+             <text class="s2" id="ts434" x="62.2552146911621" y="84.25">
+              Разгребель
+             </text>
+             <text class="s2" id="ts435" x="27.6067695617676" y="99.125">
+              (26.05.1885 -
+             </text>
+             <text class="s2" id="ts436" x="31.2109394073486" y="114">
+              12.08.1965)
+             </text>
+             <text class="s2" id="ts437" x="8.94791793823242" y="128.875">
+              мест.жит. с. Казачья
+             </text>
+             <text class="s2" id="ts438" x="44.7890663146973" y="143.75">
+              Локня
+             </text>
+             <text class="s8" id="ts439" x="27.0000038146973" y="158.625">
+              Домохозяйка
+             </text>
+             <text class="s2" id="ts440" x="0" y="173.5">
+              ум. в п. Карла Либнехта
+             </text>
+             <text class="s2" id="ts441" x="46.3958358764648" y="188.375">
+              Жена
+             </text>
+             <text class="s2" id="ts442" x="53.9505233764648" y="203.25">
+              80
+             </text>
+             <text class="s10" id="ts443" x="29.8203163146973" y="218.125">
+              Синицыны
+             </text>
+            </g>
+            <polygon class="s9" id="p426" points="1,18 1,11 11,1 18,1 ">
+            </polygon>
+           </g>
+           <rect class="s7" height="226.125" id="r444" rx="10" ry="10" width="124.546882629395" x="0.5" y="0.5">
+           </rect>
+           <defs>
+            <clippath id="g446">
+             <rect class="s0" height="226.125" id="r447" rx="10" ry="10" width="124.546882629395" x="0.5" y="0.5">
+             </rect>
+            </clippath>
+           </defs>
+          </g>
+         </g>
+        </g>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </svg>
+ </body>
+</html>
