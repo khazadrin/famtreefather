@@ -62,7 +62,7 @@
 		elmnt.scrollIntoView();
 	}
 	nodeclick = function(i) {
-		document.getElementById("modalContent").innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="Leonid_Alipiev.html.files/p' + i + '.html?s=40e61f1684322292" class="modal-frame"></iframe>';
+		document.getElementById("modalContent").innerHTML = '<iframe id="idetail" onload="currpos+=1;" src="' + i + '" class="modal-frame"></iframe>';
 		modal.style.display = "block";
 	}
 	window.onclick = function(event) {
